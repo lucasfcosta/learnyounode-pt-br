@@ -4,23 +4,37 @@ Este é o projeto de tradução do workshop [Learnyounode](https://github.com/rv
 Peço aos interessados em contribuir que leiam este arquivo para sanar eventuais dúvidas sobre como funcionará o processo de tradução.
 Dúvidas quanto ao funcionamento de um workshop nos padrões da NodeSchool ou quanto à própria tradução podem ser perguntadas no [Issue Tracker do próprio projeto](https://github.com/lucasfcosta/learnyounode-pt-br/issues) com a label "Dúvida".
 
+##Estrutura de Arquivos
+- learnyounode-pt-br
+ \__ docs
+ \__ exercicios
+    \__ menu.json
+ \__ lib
+ \__ node_apidoc
+ \__ README.md
+ \__ LICENSE
+ \__ learnyounode.js
+ \__ help.txt
+ \__ credits.txt
+ \__ credits.js
+
 
 ##Como Contribuir
 ###Traduzindo
-1. [Nosso issue tracker](https://github.com/lucasfcosta/learnyounode-pt-br/issues) possui uma issue para cada um dos exercícios, escolha um exercício disponível para tradução e peça na sua respectiva issue a concessão para tradução.
+1. [Nosso issue tracker](https://github.com/lucasfcosta/learnyounode-pt-br/issues) possui uma issue para cada um dos conteúdos, escolha um conteúdo disponível para tradução e peça na sua respectiva issue a concessão para tradução.
 2. Após obter a concessão para a tradução faça um *fork* do do projeto.
 3. Faça a tradução em seu *fork*.
 4. Abra um *Pull Request* para o repositório original.
 **IMPORTANTE:** Obtenha a concessão para outra tradução apenas depois de ter finalizado a tradução anteriormente solicitada.
 
 ###Revisando
-Toda a tradução irá passar por uma revisão após ser traduzida, além de traduzir conteúdo você também pode contribuir revisando conteúdo já traduzido procurando por erros semânticos de tradução e corrigindo eventuais [http://www.inglesnosupermercado.com.br/o-que-significa-typo-em-ingles/](*typos*) ou outros erros gramaticais.
+Toda tradução irá passar por uma revisão após ser traduzida, além de traduzir conteúdo você também pode contribuir revisando conteúdo já traduzido procurando por erros semânticos de tradução e corrigindo eventuais [http://www.inglesnosupermercado.com.br/o-que-significa-typo-em-ingles/](*typos*) ou outros erros gramaticais.
 1. Verique no [issue tracker](https://github.com/lucasfcosta/learnyounode-pt-br/issues) quais conteúdos estão com a tag "Aguardando Revisão".
-2. Comente avisando que irá revisar o exercício.
+2. Comente avisando que irá revisar o conteúdo.
 3. Faça um *fork* do projeto.
-4. Realize as correções necessárias. 
+4. Realize as correções necessárias.
 5. Abra um *Pull Request*.
-6. Comente na issue do capít
+6. Comente na issue do capítulo dando seu parecer final sobre o capítulo.
 
 ##Significado das Labels
 * **Nenhuma Label** - Disponível para tradução
