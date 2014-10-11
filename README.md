@@ -4,21 +4,6 @@ Este é o projeto de tradução do workshop [Learnyounode](https://github.com/rv
 Peço aos interessados em contribuir que leiam este arquivo para sanar eventuais dúvidas sobre como funcionará o processo de tradução.
 Dúvidas quanto ao funcionamento de um workshop nos padrões da NodeSchool ou quanto à própria tradução podem ser perguntadas no [Issue Tracker do próprio projeto](https://github.com/lucasfcosta/learnyounode-pt-br/issues) com a label "Dúvida".
 
-##Estrutura de Arquivos
-- learnyounode-pt-br
- \__ docs
- \__ exercicios
-    \__ menu.json
- \__ lib
- \__ node_apidoc
- \__ README.md
- \__ LICENSE
- \__ learnyounode.js
- \__ help.txt
- \__ credits.txt
- \__ credits.js
-
-
 ##Como Contribuir
 ###Traduzindo
 1. [Nosso issue tracker](https://github.com/lucasfcosta/learnyounode-pt-br/issues) possui uma issue para cada um dos conteúdos, escolha um conteúdo disponível para tradução e peça na sua respectiva issue a concessão para tradução.
