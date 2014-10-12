@@ -1,18 +1,17 @@
-{yellow}{bold}Having trouble with a {appname} exercise?{/bold}{/yellow}
+{yellow}{bold}Está com dificuldades em algum exercício do {appname}?{/bold}{/yellow}
 
-  A team of expert helper elves is eagerly waiting to assist you in
-  mastering the basics of Node.js, simply go to:
+  Uma equipe de duendes especialistas está ansiosamente
+  esperando para lhe ajudar a dominar o básico de Node.js, simplesmente visite:
     https://github.com/nodeschool/discussions/issues
-  and add a {bold}New Issue{/bold} and let us know what you're having trouble
-  with. There are no {italic}dumb{/italic} questions!
+  e abra uma {bold}New Issue{/bold} nos perguntando sobre seu problema. Não existem perguntas {italic}idiotas{/italic}!
 
-  If you're looking for general help with Node.js, the #Node.js
-  channel on Freenode IRC is usually a great place to find someone
-  willing to help. There is also the Node.js Google Group:
+  Se você está procurando por ajuda em geral sobre Node.js, o canal #Node.js no
+  Freenode IRC costuma ser um ótimo lugar para achar alguém disposto a ajudar.
+  Existe também o Node.js Google Group:
     https://groups.google.com/forum/#!forum/nodejs
 
-{yellow}{bold}Found a bug with {appname} or just want to contribute?{/bold}{/yellow}
+{yellow}{bold}Encontrou um bug no {appname} ou apenas deseja contribuir?{/bold}{/yellow}
 
-  The official repository for {appname} is:
+  O repositório oficial para o {appname} é:
     https://github.com/rvagg/learnyounode/
-  Feel free to file a bug report or (preferably) a pull request.
+  Sinta-se à vontade para reportar bugs ou (preferencialmente) enviar uma Pull Request.
