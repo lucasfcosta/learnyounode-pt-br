@@ -20,6 +20,7 @@ Toda tradução irá passar por uma revisão após ser traduzida, além de tradu
 4. Realize as correções necessárias.
 5. Abra um *Pull Request*.
 6. Comente na issue do capítulo dando seu parecer final sobre o capítulo.
+**IMPORTANTE:** A revisão não será feita pelo tradutor, para que haja uma revisão válida ela deve ser outra pessoa.
 
 ##Significado das Labels
 * **Nenhuma Label** - Disponível para tradução
