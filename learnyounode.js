@@ -6,8 +6,8 @@ const workshopper = require('workshopper')
     , menu        = require('./exercises/menu')
 
     , name        = 'learnyounode'
-    , title       = 'LEARN YOU THE NODE.JS FOR MUCH WIN!'
-    , subtitle    = '\x1b[23mSelect an exercise and hit \x1b[3mEnter\x1b[23m to begin'
+    , title       = 'APRENDA O NODE.JS PARA A MAIS PLENA VITÓRIA!'
+    , subtitle    = '\x1b[23mEscolha um exercício e pressione \x1b[3mEnter\x1b[23m para começar'
 
 
 function fpath (f) {
@@ -23,7 +23,7 @@ workshopper({
   , appDir      : __dirname
   , helpFile    : fpath('help.txt')
   , menuItems   : [ {
-        name    : 'credits'
+        name    : 'Créditos'
       , handler : credits
     } ]
 })
