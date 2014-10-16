@@ -1,28 +1,28 @@
-Write a program that uses a single **synchronous** filesystem operation to read a file and print the number of newlines it contains to the console (stdout), similar to running `cat file | wc -l`.
+Escreva um programa que usa uma única operação síncrona de sistema de arquivos (filesystem) para ler e imprimir o número de novas linhas que ele contém no console (stdout), algo similar à executar `cat file | wc -l`.
 
-The full path to the file to read will be provided as the first command-line argument.
+Todo o caminho até o arquivo à ser lido será fornecido como primeiro argumento da linha de comando.
 
 ----------------------------------------------------------------------
-## HINTS
+## DICAS
 
-To perform a filesystem operation you are going to need the `fs` module from the Node core library. To load this kind of module, or any other "global" module, use the following incantation:
+Para realizar uma operação de sistema de arquivos (filesystem), você vai precisar do módulo `fs` da library principal do Node. Para carregar esse tipo de módulo ou qualquer outro módulo "global", use o seguinte código:
 
 ```js
 var fs = require('fs')
 ```
 
-Now you have the full `fs` module available in a variable named `fs`.
+Agora você tem o módulo `fs` completo disponível em uma variável chamada `fs`.
 
-All synchronous (or blocking) filesystem methods in the `fs` module end with 'Sync'. To read a file, you'll need to use `fs.readFileSync('/path/to/file')`. This method will *return* a `Buffer` object containing the complete contents of the file.
+Todas os métodos de sistema de arquivos síncronas (ou bloqueantes) no módulo `fs` terminam com 'Sync'. Para ler um arquivo, você vai precisar usar `fs.readFileSync('caminho/do/arquivo')`. Esse método irá retornar um objeto `Buffer` contendo o conteúdo completo do arquivo.
 
-Documentation on the `fs` module can be found by pointing your browser here:
+A documentação do módulo `fs` pode ser encontrada apontando seu navegador para esse endereço:
   {rootdir:/node_apidoc/fs.html}
 
-`Buffer` objects are Node's way of efficiently representing arbitrary arrays of data, whether it be ascii, binary or some other format. `Buffer` objects can be converted to strings by simply calling the `toString()` method on them. e.g. `var str = buf.toString()`.
+Objetos `Buffer` são a maneira do Node de representar eficientemente arrays arbitrários de dados, sejam eles ascii, binários ou quaisquer outros formatos. Objetos `Buffer` podem ser convertidos em strings invocando o método `toString()` neles. Por exemplo: `var str = buf.toString()`.
 
-Documentation on `Buffer`s can be found by pointing your browser here:
+A documentação sobre `Buffer`s pode ser encontrada apontando seu navegador para esse endereço:
   {rootdir:/node_apidoc/buffer.html}
 
-If you're looking for an easy way to count the number of newlines in a string, recall that a JavaScript `String` can be `.split()` into an array of substrings and that '\n' can be used as a delimiter. Note that the test file does not have a newline character ('\n') at the end of the last line, so using this method you'll end up with an array that has one more element than the number of newlines.
+Se você estiver procurando por uma maneira fácil de contar o número de novas linhas em uma string, lembre-se que uma `String` JavaScript pode ser dividida usando `.split()` em um array de substrings e que '`\n`' pode ser usado como um delimitador. Note que o arquivo de teste não possui um caractere de nova linha ('`\n`') no fim da última linha, então ao usar esse método você vai acabar tendo um array com um elemento a mais do que o número de novas linhas.
 
 ----------------------------------------------------------------------
