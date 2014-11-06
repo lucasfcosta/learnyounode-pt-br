@@ -1,26 +1,26 @@
-Create a program that prints a list of files in a given directory, filtered by the extension of the files. You will be provided a directory name as the first argument to your program (e.g. '/path/to/dir/') and a file extension to filter by as the second argument.
-
-For example, if you get 'txt' as the second argument then you will need to filter the list to only files that **end with .txt**. Note that the second argument _will not_ come prefixed with a '.'.
-
-The list of files should be printed to the console, one file per line. You **must** use asynchronous I/O.
+Crie um programa que imprima uma lista de arquivos filtrados por suas extensões em um dado diretório. Você irá receber um nome de diretório como primeiro argumento para seu programa (por exemplo: 'caminho/para/diretorio/') e uma extensão de arquivo pela qual filtrar como segundo argumento.
+ 
+Por exemplo, se você receber 'txt' como segundo argumento, então você precisará criar um filtro para que a lista contenha apenas arquivos que **terminem com .txt**. Note que o segundo argumento _não irá_ vir precedido por um '.' (ponto).
+ 
+A lista de arquivos deve ser impressa no console, um arquivo por linha. Você **precisa**, obrigatóriamente, usar I/O assíncrono.
 
 ----------------------------------------------------------------------
-## HINTS
+## DICAS
 
-The `fs.readdir()` method takes a pathname as its first argument and a callback as its second. The callback signature is:
+O método `fs.readdir()` recebe o caminho de um diretório como seu primeiro argumento e um callback como seu segundo. A assinatura do callback é:
 
 ```js
 function callback (err, list) { /* ... */ }
 ```
 
-where `list` is an array of filename strings.
+onde `list` é um array de Strings contendo nomes de arquivos.
 
-Documentation on the `fs` module can be found by pointing your browser here:
+Documentação relativa ao módulo `fs` pode ser encontrada apontando seu navegador para este endereço:
   {rootdir:/node_apidoc/fs.html}
 
-You may also find node's `path` module helpful, particularly the `extname` method.
+Você também pode achar o módulo `path` do node muito útil, especialmente o método `extname`.
 
-Documentation on the `path` module can be found by pointing your browser here:
+A documentação do módulo `path` pode ser encontrada apontando seu navegador para este endereço:
   {rootdir:/node_apidoc/path.html}
 
 ----------------------------------------------------------------------
