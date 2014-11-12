@@ -7,7 +7,7 @@ Dúvidas quanto ao funcionamento de um workshop nos padrões da NodeSchool ou qu
 ##Como Contribuir
 ###Traduzindo
 1. [Nosso issue tracker](https://github.com/lucasfcosta/learnyounode-pt-br/issues) possui uma issue para cada um dos conteúdos, escolha um conteúdo disponível para tradução e peça na sua respectiva issue a concessão para tradução.
-2. Após obter a concessão para a tradução faça um *fork* do do projeto.
+2. Após obter a concessão para a tradução faça um *fork* do projeto.
 3. Faça a tradução em seu *fork*.
 4. Abra um *Pull Request* para o repositório original.
 **IMPORTANTE:** Obtenha a concessão para outra tradução apenas depois de ter finalizado a tradução anteriormente solicitada.
