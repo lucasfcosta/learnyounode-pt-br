@@ -14,6 +14,7 @@ Dúvidas quanto ao funcionamento de um workshop nos padrões da NodeSchool ou qu
 
 ###Revisando
 Toda tradução irá passar por uma revisão após ser traduzida, além de traduzir conteúdo você também pode contribuir revisando conteúdo já traduzido procurando por erros semânticos de tradução e corrigindo eventuais [*typos*](http://www.inglesnosupermercado.com.br/o-que-significa-typo-em-ingles/) ou outros erros gramaticais.
+
 1. Verique no [issue tracker](https://github.com/lucasfcosta/learnyounode-pt-br/issues) quais conteúdos estão com a tag "Aguardando Revisão".
 2. Comente avisando que irá revisar o conteúdo.
 3. Faça um *fork* do projeto.
