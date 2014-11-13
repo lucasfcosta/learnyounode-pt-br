@@ -1,14 +1,14 @@
-This problem is the same as the previous problem (HTTP COLLECT) in that you need to use `http.get()`. However, this time you will be provided with **three** URLs as the first three command-line arguments.
+Este problema é igual ao anterior (HTTP COLLECT) no aspecto do que você deveria fazer, usar `http.get()`. Porém, dessa vez você vai receber **três** URLs como os primeiros três argumentos da linha de comando.
 
-You must collect the complete content provided to you by each of the URLs and print it to the console (stdout). You don't need to print out the length, just the data as a String; one line per URL. The catch is that you **must** print them out in the same order as the URLs are provided to you as command-line arguments.
+Você deve coletar o conteúdo completo fornecido por cada uma das URLs e imprimir os dados no console (stdout). Você não precisa imprimir o comprimento, apenas os dados em forma de String; uma linha por URL. A grande "sacada" aqui é que você **deve** imprimí-las na mesma ordem que as URLs foram passadas à você pela linha de comando.
 
 ----------------------------------------------------------------------
-## HINTS
+## DICAS
 
-Don't expect these three servers to play nicely! They are not going to give you complete responses in the order you hope, so you can't naively just print the output as you get it because they will be out of order.
+Não espere que estes três servidores joguem limpo! Eles não vão te dar respostas completas na ordem que você espera, então você não pode inocentemente apenas imprimir os resultados na hora que eles chegam, pois dessa forma eles estarão fora de ordem.
 
-You will need to queue the results and keep track of how many of the URLs have returned their entire contents. Only once you have them all, you can print the data to the console.
+Você vai precisar enfileirar os resultados e manter um registro de quantas URLs já retornaram o conteúdo completo. Uma vez que você tiver todos os dados, você poderá imprimí-los no console.
 
-Counting callbacks is one of the fundamental ways of managing async in Node. Rather than doing it yourself, you may find it more convenient to rely on a third-party library such as [async](http://npm.im/async) or [after](http://npm.im/after). But for this exercise, try and do it without any external helper library.
+Contar callbacks é uma das maneiras fundamentais de lidar com chamadas assíncronas no Node. Ao invés de fazer isso manualmente, você pode achar mais conveniente depender de uma library de terceiros como por exemplo [async](http://npm.im/async) ou [after](http://npm.im/after). Mas para esse exercício, tente fazer sem ajuda de nenhuma library externa.
 
 ----------------------------------------------------------------------
