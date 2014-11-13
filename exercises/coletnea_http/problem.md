@@ -1,49 +1,49 @@
-Write a program that performs an HTTP GET request to a URL provided to you as the first command-line argument. Collect **all** data from the server (not just the first "data" event) and then write two lines to the console (stdout).
+Escreva um programa que realize uma requisição HTTP GET em uma URL fornecida por você como o primeiro argumento na linha de comando. Pegue **todos** os dados ("data") do servidor (não apenas o primeiro evento "data") e então escreva duas linhas no console (stdout).
 
-The first line you write should just be an integer representing the number of characters received from the server and the second line should contain the complete String of characters sent by the server.
+A primeira linha você vai escrever deve apenas ser um inteiro representando o número de caracteres recebidos do servidor, e a outra linha deve conter a String completa de caracteres enviados pelo servidor.
 
 ----------------------------------------------------------------------
-## HINTS
+## DICAS
 
-There are two approaches you can take to this problem: 
+Existem duas abordagens para você resolver este problema:
 
-**1)** Collect data across multiple "data" events and append the results together prior to printing the output. Use the "end" event to determine when the stream is finished and you can write the output.
+**1)** Coletar dados através de múltiplos eventos "data" e anexar os resultados antes de imprimí-los na saída. Use o evento "end" para determinar quando a stream (o fluxo) terminou e então você pode imprimir a saída.
 
-**2)** Use a third-party package to abstract the difficulties involved in collecting an entire stream of data. Two different packages provide a useful API for solving this problem (there are likely more!): `bl` (Buffer List) and `concat-stream`; take your pick!
+**2)** Use um pacote de terceiros para abstrair as dificuldades envolvidas em coletar uma stream inteira de dados. Dois pacotes diferentes fornecem uma API útil para resolver este problema (existem mais parecidos!): `bl` (Buffer List) e `concat-stream`; faça sua escolha!
 
   <http://npm.im/bl>
   <http://npm.im/concat-stream>
 
-To install a Node package, use the Node Package Manager `npm`. Simply type:
+Para instalar um pacote Node, use o Node Package Manager `npm`. Apenas digite:
 
 ```sh
 $ npm install bl
 ```
 
-And it will download and install the latest version of the package into a subdirectory named `node_modules`. Any package in this subdirectory under your main program file can be loaded with the `require` syntax without being prefixed by './':
+E isso vai fazer o download e instalar a última versão do pacote dentro de um sub-diretório chamado `node_modules`. Qualquer pacote neste sub-diretório sob seu arquivo principal do programa poderá carregá-lo com a sintaxe `require` sem ser precedido por `./`:
 
 ```js
 var bl = require('bl')
 ```
 
-Node will first look in the core modules and then in the `node_modules` directory where the package is located.
+Node vai primeiro olhar dentro dos módulos do núcleo e então dentro do diretório `node_modules` onde o pacote está localizado.
 
-If you don't have an Internet connection, simply make a `node_modules` directory and copy the entire directory for the package you want to use from inside the {appname} installation directory:
+Se você não tem uma conexão com a internet, simplesmente crie um diretório `node_modules` e copie o diretório inteiro do pacote que você gostaria de usar dentro do diretório de instalação da sua aplicação.
 
   {rootdir:/node_modules/bl}
   {rootdir:/node_modules/concat-stream}
 
-Both `bl` and `concat-stream` can have a stream *piped* in to them and they will collect the data for you. Once the stream has ended, a callback will be fired with the data:
+Ambos `bl` e `concat-stream` pode ter uma stream *piped* (canalizada) dentro deles e então vão coletar os dados para você. Uma vez que a stream terminou, um callback vai ser disparado com os dados:
 
 ```js
 response.pipe(bl(function (err, data) { /* ... */ }))
-// or
+// ou
 response.pipe(concatStream(function (data) { /* ... */ }))
 ```
 
-Note that you will probably need to `data.toString()` to convert from a Buffer.
+Note que você provavelmente vai precisar de `data.toString()` para converter o Buffer.
 
-Documentation for both of these modules has been installed along with {appname} on your system and you can read them by pointing your browser here:
+A documentação para ambos estes módulos foram instaladas juntamente com {appname} em seu sistema e você pode lê-las direcionando seu navegador aqui:
 
   {rootdir:/docs/bl.html}
   {rootdir:/docs/concat-stream.html}
