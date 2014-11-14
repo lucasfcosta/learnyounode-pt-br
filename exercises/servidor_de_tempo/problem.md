@@ -1,31 +1,31 @@
-Write a **TCP time server**!
+Escreva um **Servidor de Tempo TCP**!
 
-Your server should listen to TCP connections on the port provided by the first argument to your program. For each connection you must write the current date & 24 hour time in the format:
+Seu servidor deve listar para conexões TCP na porta fornecida pelo primeiro argumento de seu programa. Para cada conexão você deve escrever a data atual e o hora (em 24h) no formato:
 
 ```
 "YYYY-MM-DD hh:mm"
 ```
 
-followed by a **newline** character. Month, day, hour and minute must be *zero-filled* to 2 integers. For example:
+seguido por um caracter **newline** (nova linha). Mês, dia, hora e minuto devem ser *preenchidos com zero* para terem dois inteiros. Por exemplo:
 
 ```
 "2013-07-06 17:42"
 ```
 
 ----------------------------------------------------------------------
-## HINTS
+## DICAS
 
-For this exercise we'll be creating a raw TCP server. There's no HTTP involved here so we need to use the `net` module from Node core which has all the basic networking functions.
+Para este exercício nós vamos criar um servidor TCP cru. Não há HTTP envolvido aqui então vamos precisar usar o módulo `net` do núcleo do Node que contém todas as funções de rede (networking) básicas.
 
-The `net` module has a method named `net.createServer()` that takes a callback function. Unlike most callbacks in Node, the callback used by `createServer()` is called more than once. Every connection received by your server triggers another call to the callback. The callback function has the signature:
+O módulo `net` tem método chamado `net.createServer()` que recebe uma função callback. Diferente da maiorira dos callbacks no Node, o callback usado por `createServer()` é chamado mais de uma vez. Toda conexão recebida por nosso servidor dispara outra chamada para o callback. A função callback tem a seguinte assinatura:
 
 ```js
 function callback (socket) { /* ... */ }
 ```
 
-`net.createServer()` also returns an instance of your `server`. You must call `server.listen(portNumber)` to start listening on a particular port.
+`net.createServer()` também retorna uma instância do seu `server`. Você deve chamar `server.listen(portNumber)` para iniciar a escuta da porta em questão.
 
-A typical Node TCP server looks like this:
+Um típico servidor TCP em Node se parece com isso:
 
 ```js
 var net = require('net')
@@ -35,26 +35,26 @@ var server = net.createServer(function (socket) {
 server.listen(8000)
 ```
 
-Remember to use the port number supplied to you as the first command-line argument.
+Lembre-se de usar o número da porta fornecida para você como primeiro argumento da linha de comando.
 
-The `socket` object contains a lot of meta-data regarding the connection, but it is also a Node duplex Stream, in that it can be both read from, and written to. For this exercise we only need to write data and then close the socket.
+O objeto `socket` contém muitos *meta-dados* em relação a conexão, mas isso é também um *Node duplex Stream*, em que isso pode ser ambos "lido de", ou "escrito em". Para este exercício nós vamos apenas escrever os dados e então fechar o socket.
 
-Use `socket.write(data)` to write data to the socket and `socket.end()` to close the socket. Alternatively, the `.end()` method also takes a data object so you can simplify to just: `socket.end(data)`.
+Use `socket.write(data)` para escrever dados para o socket e `socket.end()` para fechar o socket. Alternativamente, o método `.end()` também pode receber um objeto *data*, então você pode simplificar da seguinte forma: `socket.end(data)`.
 
-Documentation on the `net` module can be found by pointing your browser here:
+Documentação do módulo `net` pode ser encontrada apontando seu navegador para:
 
   {rootdir:/node_apidoc/net.html}
 
-To create the date, you'll need to create a custom format from a `new Date()` object. The methods that will be useful are:
+Para criar uma data, você vai precisar de criar um formato customizado a partir do objeto `new Date()`. Os métodos que lhe serão úteis são:
 
 ```js
 date.getFullYear()
-date.getMonth()     // starts at 0
-date.getDate()      // returns the day of month
+date.getMonth()     // começa no 0
+date.getDate()      // retorna o dia do mês
 date.getHours()
 date.getMinutes()
 ```
 
-Or, if you want to be adventurous, use the `strftime` package from npm. The `strftime(fmt, date)` function takes date formats just like the unix `date` command. You can read more about strftime at: https://github.com/samsonjs/strftime
+Ou, se você quiser ser aventureiro, use o pacote `strftime` do npm. A função `strftime(fmt, date)` pega o formato de data assim como o comando `date` do unix. Você pode ler mais sobre o strftime em: https://github.com/samsonjs/strftime
 
 ----------------------------------------------------------------------
