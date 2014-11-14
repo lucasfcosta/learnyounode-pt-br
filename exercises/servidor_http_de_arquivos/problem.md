@@ -1,27 +1,27 @@
-Write an HTTP **server** that serves the same text file for each request it receives.
+Escreva um  **servidor** HTTP que entregue o mesmo arquivo de texto para cada solicitação recebida.
 
-Your server should listen on the port provided by the first argument to your program.
+O servidor deve escutar na porta fornecida pelo primeiro argumento do seu programa.
 
-You will be provided with the location of the file to serve as the second command-line argument. You **must** use the `fs.createReadStream()` method to stream the file contents to the response.
+Será fornecida a localização do arquivo para servir como segundo argumento da linha de comando. Você **deve** usar o método  `fs.createReadStream()` para a stream do conteúdo do arquivo para  resposta.
 
 ----------------------------------------------------------------------
-## HINTS
+##DICAS
 
-Because we need to create an HTTP server for this exercise rather than a generic TCP server, we should use the `http` module from Node core. Like the `net` module, `http` also has a method named `http.createServer()` but this one creates a server that can talk HTTP.
+Porque nós precisamos criar um servidor HTTP para este exercício em vez de criar um servidor TCP genérico, nós devemos usar o modulo `http` do núcleo do Node. Como o módulo `net`, `http` possui um método chamado `http.createServer()` mas este cria um servidor que pode transmitir HTTP.
 
-`http.createServer()` takes a callback that is called once for each connection received by your server. The callback function has the signature:
+`http.createServer()` retorna um callback que é chamado uma vez para cada conexão recebida pelo servidor. A função callback é escrita:
 
 ```js
 function callback (request, response) { /* ... */ }
 ```
 
-Where the two arguments are objects representing the HTTP request and the corresponding response for this request. `request` is used to fetch properties, such as the header and query-string from the request while `response` is for sending data to the client, both headers and body.
+Onde os dois argumentos são objetos que representam a requisição HTTP e a resposta correspondente para esta requisição. `request` é utilizado para buscar propriedades, tais como o cabeçalho e a consulta do pedido, enquanto `response` é utilizado para enviar dados para o cliente bem como o cabeçalho e o corpo.
 
-Both `request` and `response` are also Node streams! Which means that you can use the streaming abstractions to send and receive data if they suit your use-case.
+Ambos `request` and `response` são também Node streams!O que significa que podemos usar as abstrações de streaming para enviar e receber dados que se adéquam ao seu caso de uso. 
 
-`http.createServer()` also returns an instance of your `server`. You must call `server.listen(portNumber)` to start listening on a particular port.
+`http.createServer()` também retorna uma instância para seu `server`. Você deve chamar `server.listen(portNumber)` para iniciar uma escuta na porta específica.
 
-A typical Node HTTP server looks like this:
+Um típico Servidor HTTP Node parece com isto:
 
 ```js
 var http = require('http')
@@ -31,9 +31,9 @@ var server = http.createServer(function (req, res) {
 server.listen(8000)
 ```
 
-Documentation on the `http` module can be found by pointing your browser here:
+A documentação do modulo `http` pode ser encontrada redirecionando seu navegador para:
   {rootdir:/node_apidoc/http.html}
 
-The `fs` core module also has some streaming APIs for files. You will need to use the `fs.createReadStream()` method to create a stream representing the file you are given as a command-line argument. The method returns a stream object which you can use `src.pipe(dst)` to pipe the data from the `src` stream to the `dst` stream. In this way you can connect a filesystem stream with an HTTP response stream.
+O núcleo do módulo `fs` também possui algumas APIs streaming para arquivos.Você precisa usar o método `fs.createReadStream()` para criar uma stream que representa o arquivo que você passa como argumento. O método retorna um objeto de stream que você pode usar `src.pipe(dst)` para fornecer os dados de `src` stream para o `dst` stream. Desta maneira, você pode conectar um filesystem stream com uma resposta HTTP stream.
 
 ----------------------------------------------------------------------
