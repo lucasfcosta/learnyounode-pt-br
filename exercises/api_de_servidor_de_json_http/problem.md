@@ -1,10 +1,10 @@
-Write an HTTP **server** that serves JSON data when it receives a GET request to the path '/api/parsetime'. Expect the request to contain a query string with a key 'iso' and an ISO-format time as the value.
+Escreva um **servidor** HTTP que serve dados JSON quando recebe uma requisição GET no caminho `/api/parsetime`. Expere que a requisição contenha uma string de consulta com a chave 'iso' e uma data no formato ISO como valor.
 
-For example:
+Por exemplo:
 
   /api/parsetime?iso=2013-08-10T12:10:15.474Z
 
-The JSON response should contain only 'hour', 'minute' and 'second' properties. For example:
+A resposta JSON deve conter somente as propriedades 'hour', 'minute' e 'second'. Por exemplo:
 
 ```json
 {
@@ -14,39 +14,40 @@ The JSON response should contain only 'hour', 'minute' and 'second' properties. 
 }
 ```
 
-Add second endpoint for the path '/api/unixtime' which accepts the same query string but returns UNIX epoch time under the property 'unixtime'. For example:
+Adicione um segundo *endpoint* para o caminho `/api/unixtime` que aceita a mesma string de consulta, mas retorne um valor referente a *UNIX epoch time* (tempo de época UNIX) na propriedade 'unixtime'. Por exemplo:
 
 ```json
 { "unixtime": 1376136615474 }
 ```
 
-Your server should listen on the port provided by the first argument to your program.
+Seu servidor deve escutar na porta fornecida pelo primeiro argumento passado para seu programa.
 
 ----------------------------------------------------------------------
-## HINTS
+## DICAS
 
-The `request` object from an HTTP server has a `url` property that you will need to use to *"route"* your requests for the two endpoints.
+O objeto `request` de um servidor HTTP contém a propriedade `url` que você vai precisar usar para *"rotear"* suas requisições para os dois endpoints. 
 
-You can parse the URL and query string using the Node core 'url' module. `url.parse(request.url, true)` will parse content of request.url and provide you with an object with helpful properties.
+Você pode *parsear* a URL e a string de consulta usando o módulo do núcleo do Node chamado 'url'. `url.parse(request.url, true)` vai parsear o conteúdo de `request.url` e fornecer para você um objeto com propriedades úteis.
 
-For example, on the command prompt, type:
+Por exemplo, no prompt de comando, digite:
 
 ```sh
 $ node -pe "require('url').parse('/test?q=1', true)"
-```
+```  
 
-Documentation on the `url` module can be found by pointing your browser here:
+Documentação sobre o módulo `url` pode ser encontrada apontando seu navegador aqui:
   {rootdir:/node_apidoc/url.html}
   
-Your response should be in a JSON string format. Look at `JSON.stringify()` for more information.
+Sua reposta deve ser uma string no formato JSON. Veja `JSON.stringify()` para mais informações. 
 
-You should also be a good web citizen and set the Content-Type properly:
+Você deve também ser um bom cidadão da web e configurar seu `Content-Type` corretamente:
 
 ```js
 res.writeHead(200, { 'Content-Type': 'application/json' })
 ```
 
-The JavaScript `Date` object can print dates in ISO format, e.g. `new Date().toISOString()`. It can also parse this format if you pass the string into the `Date` constructor. `Date#getTime()` will also
-come in handy.
+O objeto `Date` do JavaScript pode imprimir datas no formato ISO, por exemplo, `new Date().toISOString()`. Ele também pode parsear este formato se você passar uma string para um construtor `Date`. 
+
+`Date.getTime()` também pode ser útil.
 
 ----------------------------------------------------------------------
