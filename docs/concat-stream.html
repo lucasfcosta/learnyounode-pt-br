@@ -313,10 +313,11 @@ pre code, pre tt {
   <body>
     <div class="container">
       <div class="body-content"><h1 id="concat-stream">concat-stream</h1>
+				<p>Fluxo contínuo que concatena strings ou dados binários e retorna um callback como resultado.</p>
 <div class="highlight"><pre><span class="nv">$ </span>npm install concat-stream
 </pre></div>
 
-<p>then</p>
+<p>Configurando um arquivo de entrada e adicionando dados em tempo real.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">concat</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;concat-stream&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
 
@@ -326,20 +327,21 @@ pre code, pre tt {
 <span class="nx">read</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">write</span><span class="p">)</span>
 </pre></div>
 
-<p>works with arrays too!</p>
+<p>Exemplo de funcionamento utilizando arrays</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">write</span> <span class="o">=</span> <span class="nx">concat</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{})</span>
 <span class="nx">write</span><span class="p">.</span><span class="nx">write</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 <span class="nx">write</span><span class="p">.</span><span class="nx">write</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
 <span class="nx">write</span><span class="p">.</span><span class="nx">end</span><span class="p">()</span>
-<span class="c1">// data will be [1,2,3,4,5,6] in the above callback</span>
+<span class="c1">// o valor da variável data obtido pelo callback será [1,2,3,4,5,6]</span>
 </pre></div>
 
-<p>works with buffers too! can&#39;t believe the deals!</p>
+<p>Você também consegue trafegar buffers utilizando este módulo.</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">write</span> <span class="o">=</span> <span class="nx">concat</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{})</span>
 <span class="nx">write</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="k">new</span> <span class="nx">Buffer</span><span class="p">(</span><span class="s1">&#39;hello &#39;</span><span class="p">))</span>
 <span class="nx">write</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="k">new</span> <span class="nx">Buffer</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">))</span>
 <span class="nx">write</span><span class="p">.</span><span class="nx">end</span><span class="p">()</span>
-<span class="c1">// data will be a buffer that toString()s to &#39;hello world&#39; in the above callback</span>
+<span class="c1">// o valor da variável data obtido pelo callback será um buffer </span>
+<span class="c1">// onde ao invocar o método toString() será impresso &#39;hello world&#39;</span>
 </pre></div>
 
 <p>MIT LICENSE</p>
