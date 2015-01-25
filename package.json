@@ -1,7 +1,7 @@
 {
-  "name": "learnyounode",
+  "name": "learnyounode-pt-br",
   "version": "1.0.3",
-  "description": "Learn You The Node.js For Much Win! An intro to Node.js via a set of self-guided workshops.",
+  "description": "Aprenda Node.js para a mais plena vitória! Uma introdução ao Node.js através de um conjunto de workshops automáticos.",
   "author": "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)",
   "contributors": [
     "Rod Vagg <r@va.gg> (https://github.com/rvagg)",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rvagg/learnyounode.git"
+    "url": "https://github.com/lucasfcosta/learnyounode-pt-br"
   },
   "license": "MIT",
   "dependencies": {
