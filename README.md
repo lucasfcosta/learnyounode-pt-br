@@ -4,6 +4,17 @@ Este é o projeto de tradução do workshop [Learnyounode](https://github.com/rv
 Peço aos interessados em contribuir que leiam este arquivo para sanar eventuais dúvidas sobre como funcionará o processo de tradução.
 Dúvidas quanto ao funcionamento de um workshop nos padrões da NodeSchool ou quanto à própria tradução podem ser perguntadas no [Issue Tracker do próprio projeto](https://github.com/lucasfcosta/learnyounode-pt-br/issues) com a label "Dúvida".
 
+##Estado Atual do Projeto
+
+Já terminamos o processo de tradução dos exercícios, os interessados ainda podem fazer a tradução que resta dos arquivos de documentação para que sirvam como referência se necessário. Todo o progresso que foi feito com os exercícios foi devidamente enviado ao [repositório original](https://github.com/rvagg/learnyounode). Foi preciso fazer alguns pequenos ajustes, como renomear os arquivos para corresponder à linguagem (PT-BR) e adicioná-los ao índice de linguagens disponíveis.
+Sendo assim, **o learnyounode já está inteiramente disponível em português brasileiro**.
+
+Além disso também [empurrei para o Workshopper (a plataforma que na qual o learnyounode roda) uma tradução completa para PT-BR](https://github.com/rvagg/workshopper/pull/83), assim não só os exercícios, mas também toda a interface está traduzida.
+
+![Aprendendo Node.js para a mais plena vitória!](https://raw.github.com/lucasfcosta/learnyounode-pt-br/master/learnyounode.png)
+
+Ainda assim **ainda precisamos fazer a revisão dos arquivos traduzidos** para podermos manter a qualidade da tradução e corrigir possíveis erros. Para isso os interessados devem seguir as instruções descritas abaixo.
+
 ##Como Contribuir
 ###Traduzindo
 1. [Nosso issue tracker](https://github.com/lucasfcosta/learnyounode-pt-br/issues) possui uma issue para cada um dos conteúdos, escolha um conteúdo disponível para tradução e peça na sua respectiva issue a concessão para tradução.
