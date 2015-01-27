@@ -1,20 +1,4 @@
-{yellow}{bold}learnyounode is brought to you by the following dedicated hackers:{/bold}{/yellow}
+{yellow}{bold}learnyounode é trazido até você pelos seguintes hackers dedicados:{/bold}{/yellow}
 
-{bold}Name                GitHub Username{/bold}
+{bold}Nome                GitHub Username{/bold}
 -----------------------------------
-Rod Vagg            @rvagg
-Andrey Sidorov      @sidorares
-Julian Duque        @julianduque‎
-Tim Inman           @thehack‎
-lms                 @ralphtheninja
-Brynn Bateman       @brynnb‎
-Chris Contolini     @contolini‎
-Dan Flettre         @Flet
-Jeff Kile           @jeffkile
-Joel Kemp           @mrjoelkemp‎
-Jonathan Klein      @jklein
-Justin Noel         @calendee‎
-Oli Evans           @olizilla‎
-atomizer            @atomizer
-franza              @franza‎
-gargol              @gargol
