@@ -48,7 +48,7 @@ O andamento das issues está dividido em **3 etapas**, na ordem apresentada abai
 `Em Tradução` > `Aguardando Revisão` > `Em Revisão` > `Término do Processo`
 
 ##Sobre o Learnyounode
-* Autor: [https://github.com/rvagg](Rod Vagg)
+* Autor: [Rod Vagg](https://github.com/rvagg)
 * Repositório Original: https://github.com/rvagg/learnyounode
 * Site Oficial: http://nodeschool.io
 * Licensa do Projeto: MIT
